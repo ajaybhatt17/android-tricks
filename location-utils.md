@@ -1,14 +1,18 @@
-
+```
 //For Coarse Location in API Level 23 and above (Running Permission)
 if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
          ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, REQUEST_CODE);
 } 
+```
 
+```
 //For Fine Location Permission in API Level 23 and above (Running Permission)
 if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
          ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_CODE);
 }
+```
 
+```
 //Put this callback function in activity in which you want to take user location
 @Override
 public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
@@ -26,3 +30,4 @@ public void onRequestPermissionsResult(int requestCode, @NonNull String permissi
             }
         }
     }
+```
